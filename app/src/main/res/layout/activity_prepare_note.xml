@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.activity.PrepareNote">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/arrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorPrimaryDark"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorPrimaryDark"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:src="@drawable/ic_save"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_80sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/arrowback">
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:hint="Note Title"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorTextHint"
+            android:background="@drawable/background_box"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:padding="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/datetime"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"/>
+
+        <EditText
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:hint="Subtitle"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorTextHint"
+            android:background="@drawable/background_box"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:layout_margin="@dimen/_15sdp"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            />
+
+        <ImageView
+            android:id="@+id/imageNote"
+            android:layout_width="350dp"
+            android:layout_height="211dp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutWebUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/textWebUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                android:autoLink="web"
+                android:inputType="text"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/_13ssp"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/background_box"
+            android:hint="Type Note Here"
+            android:maxLength="2000"
+            android:isScrollContainer="true"
+            android:singleLine="false"
+            android:inputType="text"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorTextHint"
+            android:textSize="@dimen/_20sdp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_miscelleanous"></include>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
